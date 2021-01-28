@@ -18,7 +18,6 @@ fieldset {
     background-color: white;
     border: 2px black solid;
     margin-top: 1em;
-    margin-bottom: none;
 }
 
 .nav-link {
@@ -103,6 +102,29 @@ body {
     float: right;
 }
 
+section.welcomebanner {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "sim paragraph";
+}
+
+
+.para {
+   grid-area: paragraph;
+   padding: 0 10%;
+   text-align: left;
+   align-self: center;
+}
+
+.para h2, p {
+    text-align: center;
+}
+
+.sim img {
+    grid-area: sim;
+}
+
 .welcome h1 {
     text-align: center;
 }
@@ -116,17 +138,17 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 4em;
-    font-size: 185%;
+    font-size: 180%;
 }
 
 .redtestbutton .btn-danger {
-    height: 6em;
+    height: 7em;
     width: 25%;
     font-weight: bold;
 }
 
 .bluetestbutton .btn-primary {
-    height: 6em;
+    height: 7em;
     width: 25%;
     font-weight: bold;
 }
@@ -147,8 +169,8 @@ section.testbuttons {
     grid-template-areas:
         "redbutton bluebutton";
     margin-bottom:3rem;
-    background: lightgray;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+    background-color: lightgray;
 }
 
 .redtestbutton {
@@ -165,49 +187,6 @@ section.testbuttons {
     align-self: center;
 }
 
-section.analyst {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas:
-        "leftcol rightrol";
-    margin-bottom: 3em;
-}
-
-.leftcol {
-    grid-area: leftcol;
-    padding: 0 20%;
-    text-align: center;
-    align-self: center;
-}
-
-.rightcol {
-    padding: 0 20%;
-    text-align: center;
-    align-self: center;
-}
-
-.leftcol h5 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.leftcol p {
-    font-size: 1rem;
-}
-
-.rightcol p {
-    font-size: 1rem;
-}
-
-.rightcol h5 {
-    font-weight: bold;
-    font-size: 1.25rem;
-    font-style: italic;
-    text-decoration: underline;
-}
-
 .tamucbtn h1 {
     color: goldenrod;
     display: inline-block;
@@ -221,23 +200,108 @@ section.analyst {
     padding: 0 .5em;
 }
 
-.AS h2 {
-    font-size: 1.5em;
+.para h2 {
+    font-weight: bold;
+}
+
+section.userstory {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "leftside rightside";
+    margin-bottom: 3em;
+}
+
+.leftside {
+    grid-area: leftside;
+    padding: 0 20%;
+    text-align: center;
+    align-self: center;
+}
+
+.rightside {
+    grid-area: rightside;
+    padding: 0 20%;
+    text-align: center;
+    align-self: center;
+}
+
+.redtestbutton button:hover, .bluetestbutton button:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+.margrine {
+    margin: 0 3em;
+}
+
+section.analysts {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-areas:
+        "klay justin alexis lasang shalu";
+    margin-bottom: 3em;
+}
+
+.klay {
+    grid-area: klay;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+}
+
+.justin {
+    grid-area: justin;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+}
+
+.alexis {
+    grid-area: alexis;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+}
+
+.Lasang {
+    grid-area: lasang;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+}
+
+.shalu {
+    grid-area: shalu;
+    padding: 0 10%;
+    text-align: left;
+    align-self: center;
+}
+
+.klay h3, p{
+    text-align: center;
     margin-top: 1em;
 }
 
+.just h3, p{
+    text-align: center;
+    margin-top: 1em;
+}
 
+.alexis h3, p{
+    text-align: center;
+    margin-top: 1em;
+}
 
+.Lasang h3, p{
+    text-align: center;
+    margin-top: 1em;
+}
 
-
-
-
-
-
-
-
-
-
-
+.shalu h3, p{
+    text-align: center;
+    margin-top: 1em;
+}
 
 
