@@ -201,7 +201,7 @@ section.testbuttons {
 }
 
 .para h2 {
-    font-weight: bold;
+    font-size: 3rem;
 }
 
 section.userstory {
@@ -303,5 +303,46 @@ section.analysts {
     text-align: center;
     margin-top: 1em;
 }
+
+.footer {
+    background-color: lightgray;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+section.Howit {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "howitworks dots";
+    margin-bottom: 3em;
+}
+
+.howitworks {
+    grid-area: howitworks;
+    padding: 0 10%;
+    text-align: center;
+    align-self: center;
+}
+
+.ishi img {
+    grid-area: dots;
+}
+
+.aheader h1 {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+
+.howitworks h1 {
+    font-size: 6rem;
+}
+
+.howitworks p {
+    font-size: 2rem;
+}
+
+
 
 
