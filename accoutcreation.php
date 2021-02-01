@@ -1,12 +1,12 @@
 <?php
 
 // connect to the db
-include_once "path";
+//include_once "path";
 
 //to test database connection later
-if(!$db){
+//if(!$db){
 	//
-}
+//}
 
 //check for submit
 if(isset($_POST['createAccount']))
