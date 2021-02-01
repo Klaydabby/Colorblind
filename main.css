@@ -117,10 +117,6 @@ section.welcomebanner {
    align-self: center;
 }
 
-.para h2, p {
-    text-align: center;
-}
-
 .sim img {
     grid-area: sim;
 }
