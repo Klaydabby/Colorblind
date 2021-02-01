@@ -1,7 +1,7 @@
 <?php
 
 // connect to the db
-include once "path"
+include_once "path";
 
 //to test database connection later
 if(!$db){
