@@ -1,3 +1,70 @@
+<?php
+
+// connect to the db
+//include_once "path";
+
+//to test database connection later
+//if(!$db){
+	//
+//}
+
+//check for submit
+if(isset($_POST['createAccount']))
+{
+	
+	// get the data from the form and assign the data to variables
+	$Firstname = $_POST['Firstname'];
+	$Lastname = $_POST['Lastname'];
+	$Email = $_POST['Email'];
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	
+  $errors = array();
+	if(empty($Firstname)
+	{
+		$errors['f'] = "First name is missing";
+	}
+
+
+	if(empty($Lastname)
+	{
+		$errors['l'] = "Last name is missing";
+	}
+
+	if(empty($Email)
+	{
+		$errors['e'] = "Email is missing";
+	}
+
+	if(empty($username)
+	{
+		$errors['u'] = "Username is missing";
+	}
+
+	if(empty($password)
+	{
+		$errors['p'] = "Password is missing";
+	}
+
+	// add slashes and prepare the data for inserting into the db
+	$Firstname = addslashes($Firstname );
+	$Lastname = addslashes($Lastname );
+	$Email = addslashes($Email);
+	$username = addslashes($username);
+	$password = addslashes($password);
+
+	//checking for errors
+	if(count($errors)==0)
+	{
+		// prepare the query
+		$query = "INSERT INTO database (Firstname, Lastname, Email, username, password) VALUES
+			('".$Firstname."','".$Lastname."','".$Email."','".$username."','".$password."')";
+
+		// run the query
+		$result = mysqli_query($db,$query);
+	}
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,30 +117,35 @@
             <label class="control-label"  for="firstname">First Name</label>
             <div class="controls">
               <input type="text" id="Firstname" name="firstname" placeholder="" class="input-xlarge">
+              <?php if(isset($errors['f'])) echo $errors['f']; ?>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="lastname">Last Name</label>
             <div class="controls">
               <input type="text" id="Lastname" name="lastname" placeholder="" class="input-xlarge">
+              <?php if(isset($errors['l'])) echo $errors['l']; ?>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="email">Email Address</label>
             <div class="controls">
               <input type="email" id="Email" name="email" placeholder="example@email.com" class="input-xlarge">
+              <?php if(isset($errors['e'])) echo $errors['e']; ?>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label"  for="username">Username</label>
             <div class="controls">
               <input type="text" id="username" name="username" placeholder="Username is case sensitive" class="input-xlarge">
+              <?php if(isset($errors['u'])) echo $errors['u']; ?>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label"  for="password">Password</label>
             <div class="controls">
               <input name="password" id="password" type="password" onkeyup='check();' />
+              <?php if(isset($errors['p'])) echo $errors['p']; ?>
               <p class="help-block">Password must have atleast:</p>
               <p class="help-block">6 Characters</p>
               <p class="help-block">One uppercase Letter</p>
