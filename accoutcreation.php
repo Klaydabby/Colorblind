@@ -76,6 +76,7 @@ if(isset($_POST['createAccount']))
     <script src="script.js"></script>
   </head>
   <body>
+    <div style="min-width: 1461px; margin: 0 auto;">
     <div class="hero-bg">
       <div class="tamucbtn">
           <div class="tamuclogo">
@@ -86,7 +87,7 @@ if(isset($_POST['createAccount']))
       </div>
       <div class="shopping">
               <a href="#"><img src="shopping-cart-48.png" alt="shoppingcart" width="65" height="65"></a>
-      </div>
+      </div>rrrr
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="Index.html">Home</a>
@@ -167,8 +168,14 @@ if(isset($_POST['createAccount']))
           </div>
         </fieldset>
     </form>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">© 2021 ALL RIGHTS RESERVED. TEXAS A&M UNIVERSITY-COMMERCE.</span>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
   </body>
 </html>
 
