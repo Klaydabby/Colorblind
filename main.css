@@ -18,7 +18,6 @@ fieldset {
     background-color: white;
     border: 2px black solid;
     margin-top: 1em;
-    margin-bottom: none;
 }
 
 .nav-link {
@@ -103,6 +102,25 @@ body {
     float: right;
 }
 
+section.welcomebanner {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "sim paragraph";
+}
+
+
+.para {
+   grid-area: paragraph;
+   padding: 0 10%;
+   text-align: left;
+   align-self: center;
+}
+
+.sim img {
+    grid-area: sim;
+}
+
 .welcome h1 {
     text-align: center;
 }
@@ -116,17 +134,17 @@ body {
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 4em;
-    font-size: 185%;
+    font-size: 180%;
 }
 
 .redtestbutton .btn-danger {
-    height: 6em;
+    height: 7em;
     width: 25%;
     font-weight: bold;
 }
 
 .bluetestbutton .btn-primary {
-    height: 6em;
+    height: 7em;
     width: 25%;
     font-weight: bold;
 }
