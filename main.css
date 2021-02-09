@@ -221,9 +221,15 @@ section.analyst {
     padding: 0 .5em;
 }
 
-.AS h2 {
-    font-size: 1.5em;
+.AS h6 {
     margin-top: 1em;
+}
+
+.AS img {
+    float:right;
+    margin-right: 3em;
+    width: 25%;
+    border-radius: 25px;
 }
 
 
