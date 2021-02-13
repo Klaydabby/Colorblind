@@ -384,3 +384,8 @@ section.Howit {
     font-size: 1.5rem;
 }
 
+input[type=submit] {
+    height: 3em;
+    width: 10em;
+}
+
