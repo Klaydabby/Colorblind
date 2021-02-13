@@ -87,7 +87,7 @@ if(isset($_POST['createAccount']))
       </div>
       <div class="shopping">
               <a href="#"><img src="shopping-cart-48.png" alt="shoppingcart" width="65" height="65"></a>
-      </div>rrrr
+      </div>
       <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="Index.html">Home</a>

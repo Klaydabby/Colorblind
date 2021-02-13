@@ -361,12 +361,13 @@ section.Howit {
 .testhead h1 {
     text-align: center;
     font-size: 4em;
-    font-weight: bold;
+    font-weight: 300;
+    margin-top: 1em;
 }
 
 .testhead h4 {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     padding: 0 8em;
     font-size: 1.5rem;
 }
