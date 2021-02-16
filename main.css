@@ -315,7 +315,7 @@ section.analysts {
     background-color: lightgray;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 10em;
+    margin-top: 15em;
 }
 
 section.Howit {
@@ -387,5 +387,48 @@ section.Howit {
 input[type=submit] {
     height: 3em;
     width: 10em;
+}
+
+section.results {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "textr glasses";
+    margin-bottom: 3em;
+    padding-top: 4em;
+}
+
+.resultstext {
+    grid-area: textr;
+    padding: 0 10%;
+    text-align: center;
+    align-self: center;
+}
+
+.testover {
+    grid-area: glasses;
+    padding: 0 10%;
+    text-align: center;
+    align-self: center;
+}
+
+.resultstext p {
+    font-size: 1.5rem;
+}
+
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block
 }
 
