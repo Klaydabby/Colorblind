@@ -1,15 +1,15 @@
 <?php
 
 // connect to the db
-//include_once "path";
+//include_once "database.php";
 
-//to test database connection later
+//to test database connection 
 //if(!$db){
 	//
 //}
 
 //check for submit
-if(isset($_POST['createAccount']))
+if(isset($_POST['update']))
 {
 	
 	// get the data from the form and assign the data to variables
