@@ -389,3 +389,27 @@ input[type=submit] {
     width: 10em;
 }
 
+.results h1 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.results p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em    
+}
+
+.results a {
+      text-align: center;
+      font-size: 1.5em;
+}
+
+.results h2 {
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 2em;
+}
+
+
+
