@@ -1,3 +1,70 @@
+<?php
+
+// connect to the db
+//include_once "database.php";
+
+//to test database connection 
+//if(!$db){
+	//
+//}
+
+//check for submit
+if(isset($_POST['update']))
+{
+	
+	// get the data from the form and assign the data to variables
+	$Firstname = $_POST['Firstname'];
+	$Lastname = $_POST['Lastname'];
+	$Email = $_POST['Email'];
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	
+  $errors = array();
+	if(empty($Firstname)
+	{
+		$errors['f'] = "First name is missing";
+	}
+
+
+	if(empty($Lastname)
+	{
+		$errors['l'] = "Last name is missing";
+	}
+
+	if(empty($Email)
+	{
+		$errors['e'] = "Email is missing";
+	}
+
+	if(empty($username)
+	{
+		$errors['u'] = "Username is missing";
+	}
+
+	if(empty($password)
+	{
+		$errors['p'] = "Password is missing";
+	}
+
+	// add slashes and prepare the data for inserting into the db
+	$Firstname = addslashes($Firstname );
+	$Lastname = addslashes($Lastname );
+	$Email = addslashes($Email);
+	$username = addslashes($username);
+	$password = addslashes($password);
+
+	//checking for errors
+	if(count($errors)==0)
+	{
+		// prepare the query
+		$query = "INSERT INTO database (Firstname, Lastname, Email, username, password) VALUES
+			('".$Firstname."','".$Lastname."','".$Email."','".$username."','".$password."')";
+
+		// run the query
+		$result = mysqli_query($db,$query);
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
