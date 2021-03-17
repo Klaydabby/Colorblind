@@ -9,61 +9,36 @@
 //}
 
 //check for submit
-if(isset($_POST['createAccount']))
-{
-	
-	// get the data from the form and assign the data to variables
-	$Firstname = $_POST['Firstname'];
-	$Lastname = $_POST['Lastname'];
-	$Email = $_POST['Email'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	
-  $errors = array();
-	if(empty($Firstname)
-	{
-		$errors['f'] = "First name is missing";
-	}
 
-
-	if(empty($Lastname)
-	{
-		$errors['l'] = "Last name is missing";
-	}
-
-	if(empty($Email)
-	{
-		$errors['e'] = "Email is missing";
-	}
-
-	if(empty($username)
-	{
-		$errors['u'] = "Username is missing";
-	}
-
-	if(empty($password)
-	{
-		$errors['p'] = "Password is missing";
-	}
-
-	// add slashes and prepare the data for inserting into the db
-	$Firstname = addslashes($Firstname );
-	$Lastname = addslashes($Lastname );
-	$Email = addslashes($Email);
-	$username = addslashes($username);
-	$password = addslashes($password);
-
-	//checking for errors
-	if(count($errors)==0)
-	{
-		// prepare the query
-		$query = "INSERT INTO database (Firstname, Lastname, Email, username, password) VALUES
-			('".$Firstname."','".$Lastname."','".$Email."','".$username."','".$password."')";
-
-		// run the query
-		$result = mysqli_query($db,$query);
-	}
-}
+   if (isset($_REQUEST['username'])) {
+    include ("init.php");
+        // $id = $_REQUEST['id'];
+        $fname = $_REQUEST['fname'];
+        $lname = $_REQUEST['lname'];
+        $email = $_REQUEST['email'];
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
+        $cpassword = $_REQUEST['cpassword'];
+    if (($password == $cpassword)){
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $ins="INSERT INTO userregistration SET   fname='$fname', lname='$lname', username='$username', password='$hash'";
+         $result = mysqli_query($conn, $ins); 
+        if($result){
+            echo "<div class='form'>
+                  <h3>You are registered successfully!</h3><br/>
+                  <p class='link'>Click here to <a href='login.html'>Login</a></p>
+                  </div>";
+        } 
+        else {
+            echo "Username already registered try different one";
+        }
+    }
+    else{
+        echo "password do not match";
+    }
+        
+   }
+    
 ?>
 <!doctype html>
 <html lang="en">

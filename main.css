@@ -315,7 +315,7 @@ section.analysts {
     background-color: lightgray;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-top: 15em;
+    margin-top: 20em;
 }
 
 section.Howit {
@@ -394,11 +394,7 @@ input[type=submit] {
     margin-top: 2em;
 }
 
-.results p {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60em    
-}
+
 
 .results a {
       text-align: center;
@@ -409,6 +405,67 @@ input[type=submit] {
     text-align: center;
     font-size: 1.7em;
     margin-top: 2em;
+}
+
+section.results {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "resultstext testover";
+    margin-bottom: 3em;
+    margin-top: 4em;
+}
+
+.resultstext {
+    grid-area: resultstext;
+    padding: 0 10%;
+    text-align: center;
+    align-self: center;
+}
+
+.testover {
+    grid-area: testover;
+    padding: 0 10%;
+    text-align: center;
+    align-self: center;
+}
+
+.ratings i {
+    font-size: 16px;
+    color: red
+}
+
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.product-image {
+    width: 100%
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px
+}
+
+h5 {
+    font-weight: 400
+}
+
+.para {
+    font-size: 16px
 }
 
 
