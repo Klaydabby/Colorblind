@@ -513,6 +513,25 @@ h5 {
     margin-left: 1em;
 }
 
+.Rsuccess a {
+    font-size: 13px;
+    background-color: goldenrod;
+    color: black;
+    font-weight: bolder;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-top: 4em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.Rsuccess a:hover {
+    background-color: rgb(18, 18, 85);
+    color: white;
+}
 
 
 
