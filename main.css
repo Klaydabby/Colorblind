@@ -533,5 +533,39 @@ h5 {
     color: white;
 }
 
+.store h3 {
+    margin-left: 25%;
+    margin-bottom: -1em;
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+.search input[type=text] {
+    margin-top: 2em;
+    width: 25em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-left: 37%;
+    height: 35px;
+}
+
+.search button {
+    background-color: goldenrod;
+    color: navy;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 35px;
+    width: 79px;
+    margin-left: -5.6px;
+    margin-top: 2.5em;
+    font-weight: bold;
+}
+
+.search button:hover {
+    background-color: navy;
+    color: goldenrod;
+}
 
 
