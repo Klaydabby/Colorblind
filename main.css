@@ -575,4 +575,20 @@ h5 {
     font-weight: 600;
 }
 
+.checkout select {
+    border: 2px solid rgb(18, 18, 85);
+    border-radius: 4px;
+    padding-left: 5px;
+    height: 2em;
+}
+.checkout input {
+    border: 2px solid rgb(18, 18, 85);
+    border-radius: 4px;
+    padding-left: 5px;
+}
+ .checkout h6 {
+     margin-top: .2em;
+ }
+
+
 
