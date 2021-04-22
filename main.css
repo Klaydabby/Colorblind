@@ -568,4 +568,11 @@ h5 {
     color: goldenrod;
 }
 
+.cart h1 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
 
